@@ -21,8 +21,8 @@ module.exports =
   #   }
   # ]
 
-  # rootView:
-  #   location: "example#getting-started"
+  rootView:
+   location: "home#index"
 
   preloads: [
     {
@@ -35,14 +35,18 @@ module.exports =
     }
   ]
 
-  # drawers:
-  #   left:
-  #     id: "leftDrawer"
-  #     location: "example#drawer"
-  #     showOnAppLoad: false
-  #   options:
-  #     animation: "swingingDoor"
-  #
+  drawers:
+    left:
+      id: "leftDrawer"
+      location: "drawers#left"
+      showOnAppLoad: false
+    right:
+      id: "rightDrawer"
+      location: "drawers#right"
+      showOnAppLoad: false
+    options:
+      animation: "swingingDoor"
+
   # initialView:
   #   id: "initialView"
   #   location: "example#initial-view"

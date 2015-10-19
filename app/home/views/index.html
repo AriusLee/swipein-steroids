@@ -1,0 +1,30 @@
+<div ng-controller="IndexController">
+
+  <super-navbar>
+    <super-navbar-button onclick="openDrawerLeft()">Menu</super-navbar-button>
+    <super-navbar-title>
+      Index
+    </super-navbar-title>
+    <super-navbar-button onclick="openDrawerRight()" side="right">Right</super-navbar-button>
+  </super-navbar>
+
+  <div class="padding">
+    <h1>Pow! Here's your fresh module!<i class="icon super-navicon-round"></i></h1>
+  </div>
+
+  <div class="bottom-bar padding hack">
+    <button class="button button-block button-positive">Block Button</button>
+    <div class="clearfix"></div>
+  </div>
+
+</div>
+
+<script>
+  function openDrawerLeft() {
+    supersonic.ui.drawers.open("left");
+  }
+
+  function openDrawerRight() {
+    supersonic.ui.drawers.open("right");
+  }
+</script>
