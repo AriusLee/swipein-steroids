@@ -3,11 +3,16 @@
     e.preventDefault();
   });
 </script>
-<ul class="list">
-  <li class="item" onclick="supersonic.ui.drawers.close()">Members</li>
-  <li class="item" onclick="supersonic.ui.drawers.close()">History</li>
+<div class="bg-black" style="top: 0;bottom: 0; position: absolute; left: 0; right: 0;">
+<ul class="list bg-black">
+  <li class="item bg-black" onclick="supersonic.ui.drawers.close()" style="color: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.05);">Group Members</li>
+  <li class="item bg-black" onclick="supersonic.ui.drawers.close()" style="color: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.05);">See History</li>
+  <li class="item bg-black" onclick="supersonic.ui.drawers.close()" style="color: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.05);">Schedules</li>
+  <li class="item bg-black" onclick="supersonic.ui.drawers.close()" style="color: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.05);">Notification Settings</li>
+
 </ul>
 <div class="bottom-bar padding">
-  <button class="button button-block button-positive">Add new Member</button>
+  <button class="button button-block button-stable button-outline">Add Group Member</button>
   <div class="clearfix"></div>
+</div>
 </div>
