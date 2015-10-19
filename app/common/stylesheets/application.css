@@ -4,6 +4,10 @@
   font-weight: 600;
 }
 
+.bg-black {
+  background: #1E1E1E;
+}
+
 .bottom-bar {
   position: fixed;
   bottom: 0;
@@ -18,4 +22,75 @@
 
 .clearfix {
   clear: both;
+}
+
+.swipein-box {
+  padding: 30px 10px;
+}
+
+#swipe-btn {
+  padding: 4px;
+  width: 250px;
+  height: 80px;
+  border: 2px solid rgba(255,255,255,0.2);
+  background: transparent;
+  margin: 0 auto;
+  transition: background 0.2s, border-color 0.2s;
+  border-radius: 6px;
+  position: relative;
+}
+
+#swipe-btn:before {
+  content: "out";
+  font-weight: bold;
+  color: rgba(255,255,255,0.6);
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 50%;
+  top: 0;
+  bottom: 0;
+  line-height: 70px;
+  font-size: 28px;
+}
+
+#swipe-btn:after {
+  content: "in";
+  font-weight: bold;
+  color: rgba(255,255,255,0.6);
+  position: absolute;
+  text-align: center;
+  right: 0;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  line-height: 70px;
+  font-size: 28px;
+}
+
+#swipe-btn.on {
+  background: #FAD044;
+  border-color: #FAD044;
+}
+
+#swipe-handle {
+  background: #FFF;
+  height: 68px;
+  border-radius: 6px;
+  width: 119px;
+  transition: left 0.2s, color 0.2s;
+  position: absolute;
+  left: 4px;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 28px;
+  color:  #444;
+  text-align: center;
+  line-height: 64px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
+}
+
+#swipe-btn.on #swipe-handle {
+  left: 50%;
+  color: #FAD044;
 }

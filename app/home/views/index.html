@@ -1,4 +1,4 @@
-<div ng-controller="IndexController">
+<div ng-controller="IndexController" style="min-height: 500px;">
 
   <super-navbar>
     <super-navbar-button onclick="openDrawerLeft()">Menu</super-navbar-button>
@@ -9,17 +9,24 @@
   </super-navbar>
 
   <div class="padding">
-    <h1>Pow! Here's your fresh module!<i class="icon super-navicon-round"></i></h1>
+    <h1>Pow! Here's your fresh module!</h1>
   </div>
 
-  <div class="bottom-bar padding hack">
-    <button class="button button-block button-positive">Block Button</button>
-    <div class="clearfix"></div>
+  <div class="bottom-bar bg-black">
+    <div class="swipein-box">
+      <div id="swipe-btn">
+        <div id="swipe-handle">swipe</div>
+      </div>
+    </div>
   </div>
 
 </div>
 
 <script>
+
+  window.scrollTo(0, 100);
+  window.scrollTo(0, 0);
+
   function openDrawerLeft() {
     supersonic.ui.drawers.open("left");
   }
@@ -27,4 +34,32 @@
   function openDrawerRight() {
     supersonic.ui.drawers.open("right");
   }
+
+  var swipeButton = document.getElementById('swipe-btn');
+  var swipeHandle = document.getElementById('swipe-handle');
+  var startx = 0;
+  var dist = 0;
+
+  swipeHandle.addEventListener("touchstart", function(e) {
+    var touchobj = e.changedTouches[0];
+    startx = parseInt(touchobj.clientX);
+    e.preventDefault();
+  });
+
+  swipeHandle.addEventListener("touchmove", function(e){
+    var touchobj = e.changedTouches[0];
+    var dist = parseInt(touchobj.clientX) - startx;
+    e.preventDefault();
+  });
+
+  swipeHandle.addEventListener("touchend", function(e){
+    var touchobj = e.changedTouches[0];
+    var dist = parseInt(touchobj.clientX) - startx;
+    if (dist > 0) {
+      swipeButton.className += " on";
+    } else {
+      swipeButton.className = "";
+    }
+    e.preventDefault();
+  });
 </script>
