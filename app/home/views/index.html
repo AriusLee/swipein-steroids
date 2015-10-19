@@ -1,4 +1,4 @@
-<div ng-controller="IndexController" style="min-height: 500px;">
+<div class="home-page" ng-controller="IndexController" style="min-height: 500px;">
 
   <super-navbar>
     <super-navbar-button onclick="openDrawerLeft()">Menu</super-navbar-button>
@@ -14,10 +14,22 @@
 
   <div class="bottom-bar bg-black">
     <div class="swipein-box">
+
+      <div id="leave-btn" class="leave-btn" onclick="showLeaveOptions()"><i class="icon super-close-round"></i></div>
+      <div id="break-btn" class="break-btn" onclick="breakTime()"><i class="icon super-log-out"></i></div>
+      <div id="unbreak-btn" class="unbreak-btn" onclick="finishBreak()"><i class="icon super-log-in"></i></div>
+
       <div id="swipe-btn">
         <div id="swipe-handle">swipe</div>
       </div>
     </div>
+  </div>
+
+  <div id="leave-options" class="bottom-drawer padding">
+    <button class="button button-block">Annual Leave</button>
+    <button class="button button-block">I'm not well</button>
+    <button class="button button-block">Something unexpected came up</button>
+    <button class="button button-block" onclick="hideLeaveOptions()" style="border-bottom: none; color: rgba(255,255,255,0.5);">Cancel</button>
   </div>
 
 </div>
@@ -27,6 +39,24 @@
   window.scrollTo(0, 100);
   window.scrollTo(0, 0);
 
+  var swipeButton = document.getElementById('swipe-btn');
+  var swipeHandle = document.getElementById('swipe-handle');
+  var startx = 0;
+  var dist = 0;
+  var leaveButton = document.getElementById('leave-btn');
+  var breakButton = document.getElementById('break-btn');
+  var unbreakButton = document.getElementById('unbreak-btn');
+
+  function showLeaveOptions() {
+    var leaveOptions = document.getElementById('leave-options');
+    leaveOptions.style.bottom = "0";
+  };
+
+  function hideLeaveOptions() {
+    var leaveOptions = document.getElementById('leave-options');
+    leaveOptions.style.bottom = "-500px";
+  };
+
   function openDrawerLeft() {
     supersonic.ui.drawers.open("left");
   }
@@ -35,10 +65,33 @@
     supersonic.ui.drawers.open("right");
   }
 
-  var swipeButton = document.getElementById('swipe-btn');
-  var swipeHandle = document.getElementById('swipe-handle');
-  var startx = 0;
-  var dist = 0;
+  function showBreakButton() {
+    breakButton.style.display = "block";
+    leaveButton.style.display = "none";
+    unbreakButton.style.display = "none";
+  }
+
+  function showUnbreakButton() {
+    unbreakButton.style.display = "block";
+    leaveButton.style.display = "none";
+    breakButton.style.display = "none";
+  }
+
+  function showLeaveButton() {
+    unbreakButton.style.display = "none";
+    leaveButton.style.display = "block";
+    breakButton.style.display = "none";
+  }
+
+  function breakTime() {
+    showUnbreakButton();
+    swipeButton.className = "pause";
+  }
+
+  function finishBreak() {
+    showBreakButton();
+    swipeButton.className = "on";
+  }
 
   swipeHandle.addEventListener("touchstart", function(e) {
     var touchobj = e.changedTouches[0];
@@ -57,8 +110,10 @@
     var dist = parseInt(touchobj.clientX) - startx;
     if (dist > 0) {
       swipeButton.className += " on";
+      showBreakButton();
     } else {
       swipeButton.className = "";
+      showLeaveButton();
     }
     e.preventDefault();
   });
