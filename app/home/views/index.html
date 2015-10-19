@@ -3,16 +3,20 @@
   <super-navbar>
     <super-navbar-button onclick="openDrawerLeft()">Menu</super-navbar-button>
     <super-navbar-title>
-      Index
+      Pizzolo Group
     </super-navbar-title>
     <super-navbar-button onclick="openDrawerRight()" side="right">Right</super-navbar-button>
   </super-navbar>
 
-  <div class="padding">
-    <h1>Pow! Here's your fresh module!</h1>
+  <div id="announcement-list" class="list">
+    <div class="item">
+      <h2><b>Venkman</b> <span class="small" style="color: #999; font-size: 13px;">11 Oct - 9:30AM</span></h2>
+      <p style="font-size: 15px;">Be on time!</p>
+    </div>
   </div>
 
   <div class="bottom-bar bg-black">
+    <div class="announcement-button" style="border-top: 1px solid #EEE; background: #F5F5F5; color: #888; font-weight: bold; text-align: center; padding: 20px; display: block;">Add an announcement</div>
     <div class="swipein-box">
 
       <div id="leave-btn" class="leave-btn" onclick="showLeaveOptions()"><i class="icon super-close-round"></i></div>

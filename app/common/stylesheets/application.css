@@ -131,6 +131,15 @@
   transition: bottom 0.2s;
 }
 
+.announcement-button {
+  background: #F5F5F5;
+  color: #888;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  display: block;
+}
+
 .bottom-drawer .button {
   background: none;
   border: none;
@@ -140,4 +149,23 @@
   color: rgba(255,255,255,0.8);
   padding-top: 12px;
   padding-bottom: 20px;
+}
+
+.list .item {
+  padding: 20px 25px;
+}
+
+.list .item p {
+  font-size: 15px;
+}
+
+.list .item h2 {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.list .item h2 .small {
+  font-size: 13px !important;
+  font-weight: normal;
+  color: #999;
 }
