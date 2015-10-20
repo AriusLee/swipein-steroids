@@ -16,7 +16,10 @@
   <li class="item bg-black" onclick="supersonic.ui.drawers.close()" style="color: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.05);">Shinjiro</li>
 </ul>
 <div class="bottom-bar padding">
-  <button class="button button-block button-stable button-outline">Add new Group</button>
-  <div class="clearfix"></div>
+  <super-navigate location="setup#new-group">
+    <button class="button button-block button-stable button-outline" onclick="supersonic.ui.drawers.close()">
+      Add new Group
+    </button>
+  </super-navigate>
 </div>
 </div>

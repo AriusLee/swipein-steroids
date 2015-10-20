@@ -1,0 +1,42 @@
+<div class="bg-black padding" style="position: fixed; top: 0; bottom: 0; left: 0; right: 0;">
+  <div class="text-center padding">
+    <h1 style="color: #FFF;">Welcome</h1>
+    <p style="color: #FFF; opacity: 0.6; margin-bottom: 20px;">You have 2 pending group requests</p>
+  </div>
+  <div class="group-request-list list">
+    <div class="item">
+      <div style="float: left;">
+        <h2>Pizzolo</h2>
+        <p>Invited by Terry</p>
+      </div>
+      <label class="toggle toggle-assertive" style="float: right;">
+        <input type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item">
+      <div style="float: left;">
+        <h2>Torii</h2>
+        <p>Invited by Terry</p>
+      </div>
+      <label class="toggle toggle-assertive" style="float: right;">
+        <input type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+  </div>
+  <div class="text-right" style="color: #FBD96C;"><a href="#/home" class="text-yellow" style="font-weight: bold; font-size: 16px; display: inline-block; padding: 20px 0;">Get Started &raquo;</a></div>
+</div>
+
+<div class="bottom-bar padding">
+  <button class="button button-block button-outline">Join an Existing Group</button>
+  <super-navigate location="setup#new-group">
+    <button class="button button-block button-energized">
+      Start a New Group
+    </button>
+  </super-navigate>
+</div>
