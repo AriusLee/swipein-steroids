@@ -45,14 +45,14 @@
 }
 
 .swipein-box {
-  padding: 30px 10px;
+  padding: 20px 10px;
   position: relative;
 }
 
 #swipe-btn {
   padding: 4px;
   width: 220px;
-  height: 80px;
+  height: 70px;
   border: 2px solid rgba(255,255,255,0.2);
   background: transparent;
   margin: 0 auto;
@@ -71,8 +71,8 @@
   right: 50%;
   top: 0;
   bottom: 0;
-  line-height: 70px;
-  font-size: 28px;
+  line-height: 60px;
+  font-size: 24px;
 }
 
 #swipe-btn:after {
@@ -85,8 +85,8 @@
   left: 50%;
   top: 0;
   bottom: 0;
-  line-height: 70px;
-  font-size: 28px;
+  line-height: 60px;
+  font-size: 24px;
 }
 
 #swipe-btn.on {
@@ -100,7 +100,7 @@
 
 #swipe-handle {
   background: #FFF;
-  height: 68px;
+  height: 58px;
   border-radius: 6px;
   width: 105px;
   transition: left 0.2s, color 0.2s;
@@ -108,10 +108,10 @@
   left: 4px;
   z-index: 2;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 24px;
   color:  #444;
   text-align: center;
-  line-height: 64px;
+  line-height: 54px;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
 }
 
@@ -125,7 +125,7 @@
 .swipein-box .break-btn,
 .swipein-box .unbreak-btn {
   position: absolute;
-  left: 9%;
+  left: 7%;
   top: 50%;
   color: rgba(255,255,255,0.6);
   font-size: 30px;
