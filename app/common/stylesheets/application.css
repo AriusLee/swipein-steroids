@@ -12,6 +12,10 @@
   color: #FBD96C;
 }
 
+.text-white {
+  color: rgba(255,255,255,0.6);
+}
+
 .bg-yellow {
   background: #FBD96C;
 }
@@ -201,4 +205,28 @@
 
 .group-request-list .item .toggle {
   margin-top: 2px;
+}
+
+.item-input {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.bg-black .input-label {
+  color: rgba(255,255,255,0.8);
+}
+
+.bg-black .item-input input {
+  color: rgba(255,255,255,0.8);
+}
+
+.bg-black .item,
+.bg-black .item select {
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.8);
+  border-color: #555;
+}
+
+.bg-none {
+  background: none !important;
 }
