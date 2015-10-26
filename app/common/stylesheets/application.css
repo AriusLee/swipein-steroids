@@ -263,3 +263,31 @@
 .custom-navbar-button.right {
   float: right;
 }
+
+.profile-page .item-input input {
+  background: none !important;
+  font-size: 18px;
+}
+
+.profile-page .item-input .input-label {
+  font-weight: bold;
+}
+
+.profile-page .avatar-row {
+  padding: 40px 0;
+}
+
+.img-holder {
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile-page .avatar-row .img-holder {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+}
+
+.profile-page .avatar-row .img-holder img {
+  height: 100%;
+}
