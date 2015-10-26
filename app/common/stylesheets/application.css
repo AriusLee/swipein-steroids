@@ -282,6 +282,10 @@
   border-radius: 50%;
 }
 
+.img-holder img {
+  height: 100%;
+}
+
 .profile-page .avatar-row .img-holder {
   margin: 0 auto;
   width: 100px;
@@ -290,4 +294,40 @@
 
 .profile-page .avatar-row .img-holder img {
   height: 100%;
+}
+
+
+.request-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 200;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.request-card {
+  background: #FFF;
+  border-radius: 6px;
+  padding: 5px;
+  text-align: left;
+}
+
+.request-card .img-holder {
+  width: 50px;
+  height: 50px;
+}
+
+.request-card .sender {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0 3px;
+}
+
+.request-card .timer {
+  font-size: 15px;
+  color: #999;
 }
