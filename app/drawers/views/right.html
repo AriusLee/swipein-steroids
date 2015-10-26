@@ -5,7 +5,9 @@
 </script>
 <div class="bg-black" style="top: 0;bottom: 0; position: absolute; left: 0; right: 0;">
   <ul class="list bg-none">
-    <li class="item bg-none" onclick="supersonic.ui.drawers.close()" style="color: rgba(255,255,255,0.9); border-color: #292929">Group Members</li>
+    <super-navigate location="users#index">
+      <li class="item bg-none" onclick="supersonic.ui.drawers.close()" style="color: rgba(255,255,255,0.9); border-color: #292929">Group Members</li>
+    </super-navigate>
     <li class="item bg-none" onclick="supersonic.ui.drawers.close()" style="color: rgba(255,255,255,0.9); border-color: #292929">See History</li>
     <li class="item bg-none" onclick="supersonic.ui.drawers.close()" style="color: rgba(255,255,255,0.9); border-color: #292929">Schedules</li>
     <li class="item bg-none" onclick="supersonic.ui.drawers.close()" style="color: rgba(255,255,255,0.9); border-color: #292929">Notification Settings</li>
