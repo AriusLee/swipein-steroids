@@ -15,6 +15,7 @@
     <super-navigate location="users#new_members">
       <div class="button button-block">Add member</div>
     </super-navigate>
+    <button class="button button-block" onclick="showRequest()">Show Swiped-in requests</button>
   </div>
 
   <div class="bottom-bar bg-black">
@@ -44,7 +45,7 @@
     <div class="request-list">
       <div class="request-item">
         <div class="row">
-          <div class="col col-10"><i class="icon super-close" style="font-size: 28px; color: rgba(255,255,255,0.3); margin-left: -13px; margin-top: 24px; display: inline-block;"></i></div>
+          <div class="col col-10 reject-button"><i class="icon super-close" style="font-size: 28px; color: rgba(255,255,255,0.3); margin-left: -13px; margin-top: 24px; display: inline-block;"></i></div>
           <div class="col col-90">
             <div class="request-card">
               <div class="row">
@@ -63,6 +64,8 @@
 
 </div>
 
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script>
 
   window.scrollTo(0, 100);
@@ -146,4 +149,13 @@
     }
     e.preventDefault();
   });
+
+  function showRequest() {
+    $(".request-overlay").fadeIn(130);
+
+    $(".reject-button").click(function() {
+      $(".request-overlay").fadeOut(130);
+    })
+  }
+
 </script>
