@@ -10,7 +10,9 @@
     </super-navigate>
     <li class="item bg-none" onclick="supersonic.ui.drawers.close()" style="color: rgba(255,255,255,0.9); border-color: #292929">See History</li>
     <li class="item bg-none" onclick="supersonic.ui.drawers.close()" style="color: rgba(255,255,255,0.9); border-color: #292929">Schedules</li>
-    <li class="item bg-none" onclick="supersonic.ui.drawers.close()" style="color: rgba(255,255,255,0.9); border-color: #292929">Notification Settings</li>
+    <super-navigate location="settings#index">
+      <li class="item bg-none" onclick="supersonic.ui.drawers.close()" style="color: rgba(255,255,255,0.9); border-color: #292929">Notification Settings</li>
+    </super-navigate>
   </ul>
   <div class="bottom-bar padding">
     <button class="button button-block button-stable button-outline" style="border-color: #333;">Add Group Member</button>
