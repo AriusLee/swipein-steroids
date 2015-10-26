@@ -1,13 +1,12 @@
 <div class="home-page" ng-controller="IndexController" style="min-height: 500px;">
 
-  <super-navbar>
-    <super-navbar-button onclick="openDrawerLeft()">Menu</super-navbar-button>
+  <div class="custom-navbar bg-gray">
+    <div class="custom-navbar-button left" onclick="openDrawerLeft()"><i class="icon super-navicon-round"></i></div>
     <super-navbar-title>
       Pizzolo Group
     </super-navbar-title>
-    <super-navbar-button onclick="openDrawerRight()" side="right">Right</super-navbar-button>
-  </super-navbar>
-
+    <div class="custom-navbar-button right" onclick="openDrawerRight()" side="right"><i class="icon super-more"></i></div>
+  </div>
   <div id="announcement-list" class="list">
     <div class="item">
       <h2><b>Venkman</b> <span class="small" style="color: #999; font-size: 13px;">11 Oct - 9:30AM</span></h2>

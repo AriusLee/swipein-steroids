@@ -234,3 +234,32 @@
 .bg-none {
   background: none !important;
 }
+
+.custom-navbar {
+  padding: 18px;
+  text-align: center;
+  position: relative;
+}
+
+.custom-navbar super-navbar-title {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.custom-navbar-button {
+  margin-top: -4px;
+}
+
+.custom-navbar-button .icon {
+  font-size: 30px;
+  color: #666;
+}
+
+.custom-navbar-button.left {
+  float: left;
+}
+
+.custom-navbar-button.right {
+  float: right;
+}
