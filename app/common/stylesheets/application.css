@@ -28,6 +28,10 @@
   background: #F5F5F5;
 }
 
+.bg-none {
+  background: none !important;
+}
+
 .bottom-bar {
   position: fixed;
   bottom: 0;
