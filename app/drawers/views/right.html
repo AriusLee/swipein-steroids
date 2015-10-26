@@ -15,7 +15,9 @@
     </super-navigate>
   </ul>
   <div class="bottom-bar padding">
-    <button class="button button-block button-stable button-outline" style="border-color: #333;">Add Group Member</button>
+    <super-navigate location="users#new_members">
+      <button class="button button-block button-stable button-outline" style="border-color: #333;" onclick="supersonic.ui.drawers.close()">Add Group Member</button>
+    </super-navigate>
     <div class="clearfix"></div>
   </div>
 </div>

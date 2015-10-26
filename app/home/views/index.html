@@ -19,7 +19,7 @@
   </div>
 
   <div class="bottom-bar bg-black">
-    <div class="announcement-button" style="border-top: 1px solid #EEE; background: #F5F5F5; color: #888; font-weight: bold; text-align: center; padding: 20px; display: block;">Add an announcement</div>
+    <div onclick="showAnnounceInputs()" class="announcement-button" style="border-top: 1px solid #EEE; background: #F5F5F5; color: #888; font-weight: bold; text-align: center; padding: 20px; display: block;">Add an announcement</div>
     <div class="swipein-box">
 
       <div id="leave-btn" class="leave-btn" onclick="showLeaveOptions()"><i class="icon super-close-round"></i></div>
@@ -33,9 +33,9 @@
   </div>
 
   <div id="leave-options" class="bottom-drawer padding">
-    <button class="button button-block">Annual Leave</button>
-    <button class="button button-block">I'm not well</button>
-    <button class="button button-block">Something unexpected came up</button>
+    <button class="button button-block" onclick="showTextInputs()">Annual Leave</button>
+    <button class="button button-block" onclick="showTextInputs()">I'm not well</button>
+    <button class="button button-block" onclick="showTextInputs()">Something unexpected came up</button>
     <button class="button button-block" onclick="hideLeaveOptions()" style="border-bottom: none; color: rgba(255,255,255,0.5);">Cancel</button>
   </div>
 
@@ -60,6 +60,35 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div id="leave-overlay" class="inputs-overlay">
+    <div class="custom-navbar bg-gray">
+      <div onclick="hideTextInputs()" class="custom-navbar-button left" style="color: #488EF1; font-size: 16px; padding-top: 5px;">Cancel</div>
+      <super-navbar-title>
+        Apply Leave
+      </super-navbar-title>
+      <div onclick="hideTextInputs()" class="custom-navbar-button right" style="color: #488EF1; font-size: 16px; padding-top: 5px;">Send</div>
+    </div>
+
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" value="Sick Leave - 11/09/2015" style="font-weight: bold;" class="leave-subject">
+      </label>
+    </div>
+    <textarea placeholder="Type your reason here..." style="padding: 10px 20px; font-size: 16px; width: 100%;" class="leave-reason"></textarea>
+  </div>
+
+  <div id="announcement-overlay" class="inputs-overlay">
+    <div class="custom-navbar bg-gray">
+      <div onclick="hideTextInputs()" class="custom-navbar-button left" style="color: #488EF1; font-size: 16px; padding-top: 5px;">Cancel</div>
+      <super-navbar-title>
+        Announcement
+      </super-navbar-title>
+      <div onclick="hideTextInputs()" class="custom-navbar-button right" style="color: #488EF1; font-size: 16px; padding-top: 5px;">Add</div>
+    </div>
+
+    <textarea placeholder="Type your announcement here..." style="padding: 10px 20px; font-size: 16px; width: 100%;" class="announcement-input"></textarea>
   </div>
 
 </div>
@@ -156,6 +185,21 @@
     $(".reject-button").click(function() {
       $(".request-overlay").fadeOut(130);
     })
+  }
+
+  function showTextInputs() {
+    $("#leave-overlay").show();
+    $(".leave-reason").focus();
+  }
+
+  function showAnnounceInputs() {
+    $("#announcement-overlay").show();
+    $(".announcement-input").focus();
+  }
+
+  function hideTextInputs() {
+    $("input, textarea").blur();
+    $(".inputs-overlay").hide();
   }
 
 </script>
